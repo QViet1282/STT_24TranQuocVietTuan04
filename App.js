@@ -1,11 +1,10 @@
 import Screen7 from "./screens/screen7";
-
+import Screen2 from "./screens/screen2";
+import Screen3 from "./screens/screen3";
 export default function App() {
-    return ( <
-        >
-        <
-        Screen7 / >
-        <
-        />
+    return (
+    <>
+        <Screen3 />
+    </>
     );
 }

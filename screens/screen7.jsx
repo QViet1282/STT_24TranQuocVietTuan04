@@ -4,6 +4,7 @@ export default function App() {
     var [user, setUser] = useState('');
     var [password, setPassword] = useState('');
     var trangThai = 0;
+    var [thongBao, setThongBao] = useState('');
     var data = [
         {
             user: 'abc1',
@@ -33,11 +34,11 @@ export default function App() {
                         for (const iterator of data) {
                             if (iterator.user == user && iterator.password == password){
                                 trangThai = 1;
-                                alert('Login ' + user +' thanh cong!');
+                                setThongBao('Login '+ user + ' thanh cong!');
                             }    
                         }
                         if(trangThai != 1)
-                            alert('User khong ton tai hoac sai password!');
+                           setThongBao('Login '+ user + ' that bai!');
 
                     }}>
                     <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>LOGIN</Text>
@@ -47,9 +48,7 @@ export default function App() {
                 <Text style={{ fontSize: 18, marginTop: 30, fontWeight: 'bold' }}>CREATE ACCOUNT</Text>
             </SafeAreaView>
             <View style={styles.view3}>
-
-
-
+                    <Text style={{color:'red'}}>{thongBao}</Text>
             </View>
 
         </View>
